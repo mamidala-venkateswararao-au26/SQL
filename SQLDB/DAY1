@@ -1,1 +1,35 @@
+Creating a table and column using Sql Quires  :
+
+CREATE TABLE Player_Details(Player_Name VARCHAR(70),
+								Player_NickName VARCHAR(50),
+								Country VARCHAR(40),
+								Player_DOB DATETIME,
+								Player_Role VARCHAR(50),
+								Player_ShirtNumber INT,
+								Matches INT,
+								Runs INT,
+								Avarage FLOAT,
+								Player_TopScore INT,
+								Player_InstaId VARCHAR(50)
+								)
+
+
+ALTER : 
+
+ALTER-ADD  : To adding new column.                                  syntax:  ALTER TABLE TABLENAME ADD COLUMNNAME DATATYPE
+
+ALTER-ALTER : using this we can change the data type ..             syntax: ALTER TABLE TABLENAME ALTER COLUMN COLUMNNAME DATATYPE
+
+ALTER-DROP : Using this can drop the column                         syntax: ALTER TABLE TABLENAME DROP COLUMN COLUMNNAME 
+
+
+
+
+DROP  :
+DROP is using for delete the Entire table ..                          syntax: DROP TABLE TABLENAME 
+
+
+
+TRUNCATE:
+TRUNCATE is using for to remove the data inside the table              Syntax: TRUNCATE TABE TABLENAME 
 
