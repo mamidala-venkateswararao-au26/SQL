@@ -1,0 +1,77 @@
+SELECT * FROM [dbo].[Player_Details]
+CREATE TABLE [dbo].[Player_Details](
+	[Player_Name] [varchar](70) NULL,
+	[Player_NickName] [varchar](50) NULL,
+	[Country] [varchar](40) NULL,
+	[Player_DOB] [datetime] NULL,
+	[Player_Role] [varchar](50) NULL,
+	[Player_ShirtNumber] [int] NULL,
+	[Matches] [int] NULL,
+	[Runs] [int] NULL,
+	[Avarage] [float] NULL,
+	[Player_TopScore] [int] NULL,
+	[Player_InstaId] [varchar](50) NULL
+) 
+
+DML : data manipulation language
+
+--> INSART
+--> UPDATE
+--> DELETE
+
+INSERT ---> To insert the data into the table
+
+syntax1:      ## here we are giving the info to the table
+
+INSERT INTO TABLENAME VALUES(V1,V2,...,VN)
+
+INSERT INTO [dbo].[Player_BIO] VALUES ('VARUN','VICKY','INDIA',1-07-1996,'BATSMAN',18,299,21000,40.56,109,'VARUN')
+
+
+SELECT * FROM [dbo].[Player_BIO]
+
+
+
+Syntax2:          ## If u want to give give data specific columns so that we can use syntax2 and remainjng columns will show the NULL..
+
+INSERT INTO TABLENAME (COL1,COL3,COL4,COL6) VALUES (V1,V3,V4,V6)            
+
+INSERT INTO [dbo].[Player_BIO] ([Player_Name],[Player_NickName],[Matches],[Runs]) VALUES ('VENKAT','VARUN',200,23454)
+
+SELECT * FROM [dbo].[Player_BIO]
+
+Syntax3;
+INSERT INTO TargetTable     ## Copy The data one table to another datable .. and target table should be same as like sourcetable and metadata
+SELECT * FROM SOURCETABLE
+
+
+INSERT INTO [dbo].[Player_Details]
+SELECT * FROM [dbo].[Player_BIO]
+
+SELECT * FROM [dbo].[Player_Details]
+
+
+Syntax4:
+## HERE run time table has to create and copy to the data as well ..
+
+SELECT *
+INTO NEWTABLE
+FROM TABLE1
+
+
+SELECT *
+INTO COPYDATA
+FROM [dbo].[Player_Details]
+
+Syntax 5:
+Here we can copy only METADATA Column not the data..
+
+SELECT *
+INTO TABLE2
+FROM TABLE1
+WHERE FALSE CONDITION
+
+SELECT *
+INTO COPYDATA1
+FROM [dbo].[Player_BIO]
+WHERE 1=0
